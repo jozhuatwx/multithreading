@@ -8,7 +8,7 @@ namespace dotnet_multithreading
 
         protected ThreadBase()
         {
-            _thread = new Thread(new ThreadStart(Run));
+            _thread = new Thread(Run);
         }
 
         public void Start()
