@@ -11,8 +11,8 @@ namespace dotnet_multithreading
         // constructor
         public Cupboard(int numOfCoffee, int numOfMilk)
         {
-            this._numOfCoffee = new SemaphoreSlim(numOfCoffee);
-            this._numOfMilk = new SemaphoreSlim(numOfMilk);
+            this._numOfCoffee = new SemaphoreSlim(numOfCoffee, numOfCoffee);
+            this._numOfMilk = new SemaphoreSlim(numOfMilk, numOfMilk);
         }
 
         // open the cupboard
