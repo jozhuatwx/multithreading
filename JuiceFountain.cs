@@ -10,7 +10,7 @@ namespace dotnet_multithreading
         // constructor
         public JuiceFountain(int numOfFountainTap)
         {
-            _numOfFountainTap = new SemaphoreSlim(numOfFountainTap);
+            _numOfFountainTap = new SemaphoreSlim(numOfFountainTap, numOfFountainTap);
         }
 
         // open the tap
